@@ -1,11 +1,11 @@
-{
+﻿{
   "app": "Gauge",
   "version": "0.1.16-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "C4108BE761401167A38FC9C2579273387A4B2FE9EA8C7E69AD9245A895BC8542",
-  "size": 78741554,
+  "sha256": "08B195DB8CD89DD4F96C6B246ECF6CD55CEB5044D526EF3FD4224A47E8445F03",
+  "size": 78740597,
   "published_at": "2026-05-18",
   "mandatory": false,
   "notes": "Optimizes AI reading chart startup and protects trading state after the window closes. AI reading uses a fast embedded chart mode, multi-timeframe signal loading is parallelized, and the desktop process keeps monitoring open paper positions or active auto-trading after the WebView closes."

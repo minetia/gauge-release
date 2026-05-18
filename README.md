@@ -1,4 +1,4 @@
-# Gauge Public Release
+﻿# Gauge Public Release
 
 This repository contains public release files only.
 
@@ -14,4 +14,4 @@ This repository contains public release files only.
 
 ## Checksum
 
-`C4108BE761401167A38FC9C2579273387A4B2FE9EA8C7E69AD9245A895BC8542`
+`08B195DB8CD89DD4F96C6B246ECF6CD55CEB5044D526EF3FD4224A47E8445F03`
