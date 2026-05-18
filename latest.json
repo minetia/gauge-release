@@ -1,12 +1,12 @@
-﻿{
+{
   "app": "Gauge",
-  "version": "0.1.16-test-public",
+  "version": "0.1.18-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "08B195DB8CD89DD4F96C6B246ECF6CD55CEB5044D526EF3FD4224A47E8445F03",
-  "size": 78740597,
-  "published_at": "2026-05-18",
+  "sha256": "BEAC606D93D347E3C37BC1CE8E2732726A44E6F9AF9A66DCAF91EA4A3A07C58D",
+  "size": 78737578,
+  "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Optimizes AI reading chart startup and protects trading state after the window closes. AI reading uses a fast embedded chart mode, multi-timeframe signal loading is parallelized, and the desktop process keeps monitoring open paper positions or active auto-trading after the WebView closes."
+  "notes": "Stabilizes the live BTC price and realtime status area so transient websocket errors no longer flash as 오류 or move the layout. Keeps the AI reading chart iframe fix and fast embedded chart mode."
 }

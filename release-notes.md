@@ -1,29 +1,23 @@
-﻿# Gauge 0.1.16-test-public
+# Gauge 0.1.18-test-public
 
 Published: 2026-05-19
 
 ## Changes
 
-- AI reading embedded chart now opens as `btc_chart.html?embed=ai`.
-- Embedded AI chart uses a fast mode for 15M, 30M, 1H, 4H, 1D, weekly, and monthly switching.
-- Fast chart mode calculates only the public six defaults needed on the AI reading screen instead of all hidden indicators.
-- Multi-timeframe AI signal loading is parallelized.
-- Automatic trading state is persisted to the internal database via `trade_engine_state`.
-- If the WebView window closes while auto-trading is active or a paper position is open, Gauge keeps a background trade guardian loop alive.
-- The guardian loop continues paper-position SL, TP, liquidation, trailing-stop, and backend auto-trading checks.
-- Installer continues clearing stale runtime files before update.
+- Stabilized the live BTC price block width so `$76,xxx / USDT / change` no longer moves left and right.
+- Removed the visual flash animation from the live price number.
+- Stopped transient WebSocket errors from replacing the realtime status with `오류`.
+- Kept the realtime dot solid instead of blinking.
+- Kept the 0.1.17 AI reading embedded chart iframe fix.
 
 ## Verification
 
 - Built `GaugeSetup.exe` locally.
 - Installed the generated setup file.
-- Verified installed version: `0.1.16-test-public`.
-- Verified installed AI reading runtime contains `embed=ai`.
-- Verified installed chart runtime contains `FAST_AI_CHART`.
-- Verified Gauge process has zero listening ports.
-- Verified `trade_engine_state` API persists auto-trading state.
-- Verified backend trade guard condition remains active when an open position exists.
+- Verified installed version: `0.1.18-test-public`.
+- Opened the installed desktop app and checked the AI reading chart screen.
+- Confirmed the installed runtime contains the fixed `last-upd` and WebSocket error handling code.
 
 ## SHA256
 
-`08B195DB8CD89DD4F96C6B246ECF6CD55CEB5044D526EF3FD4224A47E8445F03`
+`BEAC606D93D347E3C37BC1CE8E2732726A44E6F9AF9A66DCAF91EA4A3A07C58D`
