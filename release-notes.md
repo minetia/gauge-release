@@ -1,28 +1,29 @@
-# Gauge 0.1.14-test-public
+# Gauge 0.1.16-test-public
 
-Published: 2026-05-18
+Published: 2026-05-19
 
 ## Changes
 
-- Initial chart indicators now reset once to the six public defaults shown in the reference screen: EMA, BB, RSI, OB, ZONES, and WALLS.
-- AI reading avoids duplicate concurrent signal loads.
-- AI reading requests 220 candles instead of 250 while keeping EMA 200 calculations available.
-- Kline requests are cached for 30 seconds inside the page to reduce repeated menu and preset loading.
-- Fundamental data refresh runs after the first signal render instead of blocking the first AI reading screen.
-- Empty fundamental data collection now starts in the background and returns immediately.
-- The desktop bridge preloads internal Flask test clients in the background so the first menu API call is faster.
-- The installer removes stale runtime HTML/JS before installing an update.
-- Version bumped to `0.1.14-test-public`.
+- AI reading embedded chart now opens as `btc_chart.html?embed=ai`.
+- Embedded AI chart uses a fast mode for 15M, 30M, 1H, 4H, 1D, weekly, and monthly switching.
+- Fast chart mode calculates only the public six defaults needed on the AI reading screen instead of all hidden indicators.
+- Multi-timeframe AI signal loading is parallelized.
+- Automatic trading state is persisted to the internal database via `trade_engine_state`.
+- If the WebView window closes while auto-trading is active or a paper position is open, Gauge keeps a background trade guardian loop alive.
+- The guardian loop continues paper-position SL, TP, liquidation, trailing-stop, and backend auto-trading checks.
+- Installer continues clearing stale runtime files before update.
 
 ## Verification
 
-- Installed from `E:\gauge\dist\GaugeSetup.exe`.
-- Confirmed installed version: `0.1.14-test-public`.
-- Confirmed installed runtime regenerates with the new six-indicator defaults and AI reading optimization code.
-- Confirmed Gauge runs as a desktop app without listening ports.
-- Confirmed AI reading bridge checks return HTTP 200.
-- Direct uninstaller tests passed.
+- Built `GaugeSetup.exe` locally.
+- Installed the generated setup file.
+- Verified installed version: `0.1.16-test-public`.
+- Verified installed AI reading runtime contains `embed=ai`.
+- Verified installed chart runtime contains `FAST_AI_CHART`.
+- Verified Gauge process has zero listening ports.
+- Verified `trade_engine_state` API persists auto-trading state.
+- Verified backend trade guard condition remains active when an open position exists.
 
 ## SHA256
 
-`4DF06DDFC6710A47CBC2316F6AE29CACB724EDD9434C60CB9725689C42D36795`
+`C4108BE761401167A38FC9C2579273387A4B2FE9EA8C7E69AD9245A895BC8542`

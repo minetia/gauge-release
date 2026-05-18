@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.14-test-public",
+  "version": "0.1.16-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "4DF06DDFC6710A47CBC2316F6AE29CACB724EDD9434C60CB9725689C42D36795",
-  "size": 78735088,
+  "sha256": "C4108BE761401167A38FC9C2579273387A4B2FE9EA8C7E69AD9245A895BC8542",
+  "size": 78741554,
   "published_at": "2026-05-18",
   "mandatory": false,
-  "notes": "Optimizes AI reading startup. The initial chart defaults to EMA, BB, RSI, OB, ZONES, and WALLS only, cached klines reduce repeated loading, fundamental refresh no longer blocks first render, and installer refreshes stale runtime files."
+  "notes": "Optimizes AI reading chart startup and protects trading state after the window closes. AI reading uses a fast embedded chart mode, multi-timeframe signal loading is parallelized, and the desktop process keeps monitoring open paper positions or active auto-trading after the WebView closes."
 }
