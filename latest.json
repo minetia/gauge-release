@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.11-test-public",
+  "version": "0.1.12-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "1FB61E5AB082D598ACB4D75A94F1DB2BF026079B7C629ABBF6CBEE02EE2154DB",
-  "size": 78729637,
+  "sha256": "47F64B27A12B820F8A8F02F8D957620DEFE63EDDF66573D4664ABABBB1CA3C5A",
+  "size": 78733171,
   "published_at": "2026-05-18",
   "mandatory": false,
-  "notes": "Adds automatic update support. GaugeApp checks latest.json at startup, then GaugeUpdater downloads, verifies, installs, and relaunches newer builds."
+  "notes": "Hardens automatic update launch. GaugeApp runs a temporary updater copy so installed updater files can be replaced, and updater relaunches Gauge through Explorer on Windows."
 }
