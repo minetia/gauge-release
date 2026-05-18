@@ -1,9 +1,14 @@
-# Gauge 0.1.12-test-public
+# Gauge 0.1.13-test-public
 
 Published: 2026-05-18
 
 ## Changes
 
+- Fixes loading states across the four main desktop menus.
+- Ensures the full market database schema exists at app startup.
+- Analysis and chart APIs lazily load live market data when the local cache is empty.
+- AI reading now receives klines, market signals, OI history, and fundamental data through the desktop bridge.
+- Portfolio APIs continue using local user data without opening public ports.
 - Adds `GaugeUpdater.exe` for automatic updates.
 - `GaugeApp.exe` checks public `latest.json` at startup.
 - `GaugeApp.exe` runs a temporary updater copy before replacing installed files.
@@ -19,10 +24,11 @@ Published: 2026-05-18
 ## Verification
 
 - Installed from the downloaded `GaugeSetup.exe`.
-- Confirmed installed version: `0.1.12-test-public`.
+- Confirmed installed version: `0.1.13-test-public`.
+- Confirmed core API checks for analysis dashboard, SMC chart, AI reading, and portfolio all return HTTP 200.
 - Confirmed `GaugeApp.exe` starts from the installed shortcut path.
 - Confirmed `GaugeApp.exe` does not open listening ports.
 
 ## SHA256
 
-`47F64B27A12B820F8A8F02F8D957620DEFE63EDDF66573D4664ABABBB1CA3C5A`
+`4E5EFF7791824DD4331106926361180C6920521C16586D5EF156D124F43E513F`
