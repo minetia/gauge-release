@@ -1,0 +1,12 @@
+{
+  "app": "Gauge",
+  "version": "0.1.10-test-public",
+  "channel": "test-public",
+  "file": "GaugeSetup.exe",
+  "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
+  "sha256": "FBBA0128BFD34F22E6A340838330777BCDEF92F7B62C0A657CCD84071DA0A8F6",
+  "size": 71125601,
+  "published_at": "2026-05-18",
+  "mandatory": false,
+  "notes": "Portless public desktop installer. Installs GaugeApp.exe and GaugeUninstall.exe without exposing developer ports."
+}
