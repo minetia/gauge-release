@@ -1,34 +1,28 @@
-# Gauge 0.1.13-test-public
+# Gauge 0.1.14-test-public
 
 Published: 2026-05-18
 
 ## Changes
 
-- Fixes loading states across the four main desktop menus.
-- Ensures the full market database schema exists at app startup.
-- Analysis and chart APIs lazily load live market data when the local cache is empty.
-- AI reading now receives klines, market signals, OI history, and fundamental data through the desktop bridge.
-- Portfolio APIs continue using local user data without opening public ports.
-- Adds `GaugeUpdater.exe` for automatic updates.
-- `GaugeApp.exe` checks public `latest.json` at startup.
-- `GaugeApp.exe` runs a temporary updater copy before replacing installed files.
-- Updater downloads `GaugeSetup.exe`, verifies SHA256, installs silently, and relaunches Gauge.
-- Updater relaunches Gauge through Windows Explorer for shortcut-equivalent startup.
-- Public Windows desktop installer.
-- Installs `GaugeApp.exe` and `GaugeUninstall.exe`.
-- Desktop shortcut points directly to `GaugeApp.exe`.
-- Uninstall shortcut points directly to `GaugeUninstall.exe`.
-- Removes old `Gauge.url` local-port shortcut behavior.
-- Uses an internal desktop bridge instead of opening developer server ports.
+- Initial chart indicators now reset once to the six public defaults shown in the reference screen: EMA, BB, RSI, OB, ZONES, and WALLS.
+- AI reading avoids duplicate concurrent signal loads.
+- AI reading requests 220 candles instead of 250 while keeping EMA 200 calculations available.
+- Kline requests are cached for 30 seconds inside the page to reduce repeated menu and preset loading.
+- Fundamental data refresh runs after the first signal render instead of blocking the first AI reading screen.
+- Empty fundamental data collection now starts in the background and returns immediately.
+- The desktop bridge preloads internal Flask test clients in the background so the first menu API call is faster.
+- The installer removes stale runtime HTML/JS before installing an update.
+- Version bumped to `0.1.14-test-public`.
 
 ## Verification
 
-- Installed from the downloaded `GaugeSetup.exe`.
-- Confirmed installed version: `0.1.13-test-public`.
-- Confirmed core API checks for analysis dashboard, SMC chart, AI reading, and portfolio all return HTTP 200.
-- Confirmed `GaugeApp.exe` starts from the installed shortcut path.
-- Confirmed `GaugeApp.exe` does not open listening ports.
+- Installed from `E:\gauge\dist\GaugeSetup.exe`.
+- Confirmed installed version: `0.1.14-test-public`.
+- Confirmed installed runtime regenerates with the new six-indicator defaults and AI reading optimization code.
+- Confirmed Gauge runs as a desktop app without listening ports.
+- Confirmed AI reading bridge checks return HTTP 200.
+- Direct uninstaller tests passed.
 
 ## SHA256
 
-`4E5EFF7791824DD4331106926361180C6920521C16586D5EF156D124F43E513F`
+`4DF06DDFC6710A47CBC2316F6AE29CACB724EDD9434C60CB9725689C42D36795`

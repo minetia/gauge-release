@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.13-test-public",
+  "version": "0.1.14-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "4E5EFF7791824DD4331106926361180C6920521C16586D5EF156D124F43E513F",
-  "size": 78733526,
+  "sha256": "4DF06DDFC6710A47CBC2316F6AE29CACB724EDD9434C60CB9725689C42D36795",
+  "size": 78735088,
   "published_at": "2026-05-18",
   "mandatory": false,
-  "notes": "Fixes public desktop menu loading. Market DB schema is initialized on startup and analysis/chart/AI/portfolio APIs lazily load live market data instead of leaving menus stuck on loading."
+  "notes": "Optimizes AI reading startup. The initial chart defaults to EMA, BB, RSI, OB, ZONES, and WALLS only, cached klines reduce repeated loading, fundamental refresh no longer blocks first render, and installer refreshes stale runtime files."
 }
