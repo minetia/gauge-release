@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.25-test-public",
+  "version": "0.1.26-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "7628BA3D77735ED28CB1117FE4F720289A8BFEE4E4B4E266119BAFBAEE684535",
-  "size": 72936984,
+  "sha256": "A11C204901B1FC62DA16998EB4DC1200890A3F49C63A21E616C9DC1D2DEC4FD9",
+  "size": 78979895,
   "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Fixes slow 1H chart startup by avoiding multi-year initial candle loads. The default SMC chart now loads recent candles quickly, while older history can be requested in smaller end_time chunks."
+  "notes": "Adds 2022 history prefetch for 15M, 30M, 1H, 4H, 1D, weekly, and monthly charts. Charts still open fast, then load older candles in 1,000-row pages from the local cache."
 }
