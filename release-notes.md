@@ -1,24 +1,24 @@
-# Gauge 0.1.22-test-public
+# Gauge 0.1.24-test-public
 
 Published: 2026-05-19
 
 ## Changes
 
-- Added the new `지표분석` top-menu screen.
-- Ranks GAUGE/SMC indicators by how accurately each LONG/SHORT signal matched the later real chart direction.
-- Default analysis is 1H with 15M, 30M, 4H, 1D, weekly, and monthly controls prepared for expansion.
-- Includes SMC/AI signal indicators plus chart indicators such as VWAP, Ichimoku, SAR, CCI, Williams %R, CMF, Aroon, Vortex, ROC, and Momentum.
-- Updated the public test installer and desktop executables to 0.1.22.
+- Fixed 1H chart candle separation caused by realtime WebSocket candles updating the chart without updating the underlying `rawData` candle array.
+- Added realtime gap detection: if a live candle is more than one timeframe ahead of the loaded DB candles, Gauge reloads the timeframe instead of drawing an isolated live candle.
+- Expanded full SMC chart history limits so 1H can load back to 2022 when data exists.
+- Added automatic 1H history backfill to the web, market-read, and external API servers when a large 1H range is requested and local DB history is not deep enough.
+- Updated the public test installer and desktop executables to 0.1.24.
 
 ## Verification
 
-- Built `GaugeSetup.exe` locally.
-- Verified `indicator_analysis.html` script compilation.
-- Verified `http://localhost:5012/indicator_analysis.html` returns 200.
-- Verified `http://localhost:5012/api/klines/1h?limit=160` returns 200.
-- Ran the indicator analysis logic against live 1H API data and confirmed ranked results render.
-- Verified `latest.json` hash matches the setup file.
+- Verified current local 1H DB range: 2022-01-01 00:00 UTC through 2026-05-19 11:00 UTC.
+- Verified modified market-read server returns 38,387 1H rows for a 40,000-row request.
+- Verified `btc_chart.html` inline scripts compile.
+- Verified Python server files compile with `py_compile`.
+- Rebuilt `GaugeSetup.exe` locally.
+- Verified `latest.json` hash and size match the setup file.
 
 ## SHA256
 
-`19A926D94E2169CDEE8CE3D9E82A5EAB587114978839C9BDC490844F58E86D23`
+`F7D8B6ED998B5D79C48B0C2BF3BA77EAE3307F5948F70567D664375A7E446BF3`
