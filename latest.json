@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.24-test-public",
+  "version": "0.1.25-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "F7D8B6ED998B5D79C48B0C2BF3BA77EAE3307F5948F70567D664375A7E446BF3",
-  "size": 78965573,
+  "sha256": "7628BA3D77735ED28CB1117FE4F720289A8BFEE4E4B4E266119BAFBAEE684535",
+  "size": 72936984,
   "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Fixes realtime candle gaps by merging WebSocket candles into chart data and extends 1H history loading to 2022 with automatic history backfill."
+  "notes": "Fixes slow 1H chart startup by avoiding multi-year initial candle loads. The default SMC chart now loads recent candles quickly, while older history can be requested in smaller end_time chunks."
 }

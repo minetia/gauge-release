@@ -1,24 +1,26 @@
-# Gauge 0.1.24-test-public
+# Gauge 0.1.25-test-public
 
 Published: 2026-05-19
 
 ## Changes
 
-- Fixed 1H chart candle separation caused by realtime WebSocket candles updating the chart without updating the underlying `rawData` candle array.
-- Added realtime gap detection: if a live candle is more than one timeframe ahead of the loaded DB candles, Gauge reloads the timeframe instead of drawing an isolated live candle.
-- Expanded full SMC chart history limits so 1H can load back to 2022 when data exists.
-- Added automatic 1H history backfill to the web, market-read, and external API servers when a large 1H range is requested and local DB history is not deep enough.
-- Updated the public test installer and desktop executables to 0.1.24.
+- Fixed slow 1H SMC chart startup by removing the accidental 40,000-candle default load.
+- Changed full chart defaults so 1H starts with 1,200 recent candles instead of loading years of data at once.
+- Added `end_time`/`before` support to the web, market-read, and external kline APIs so older history can be loaded in small chunks.
+- Raised automatic 1H deep-history backfill threshold to large explicit requests only, preventing normal chart clicks from triggering heavy backfill work.
+- Added no-cache headers for HTML, JS, and CSS responses so installed WebView screens pick up updated chart code.
+- Updated the public test installer and desktop executables to 0.1.25.
 
 ## Verification
 
-- Verified current local 1H DB range: 2022-01-01 00:00 UTC through 2026-05-19 11:00 UTC.
-- Verified modified market-read server returns 38,387 1H rows for a 40,000-row request.
 - Verified `btc_chart.html` inline scripts compile.
-- Verified Python server files compile with `py_compile`.
+- Verified Python files compile without writing pycache.
+- Verified web `/api/klines/1h?limit=1200` returns 1,200 rows in 30.6 ms with Flask test client.
+- Verified web `/api/klines/1h?limit=1000&end_time=1700000000000` returns 1,000 older rows in 38.2 ms.
+- Verified market-read `/api/klines/1h?limit=1200` returns 1,200 rows in 11.0 ms.
 - Rebuilt `GaugeSetup.exe` locally.
 - Verified `latest.json` hash and size match the setup file.
 
 ## SHA256
 
-`F7D8B6ED998B5D79C48B0C2BF3BA77EAE3307F5948F70567D664375A7E446BF3`
+`7628BA3D77735ED28CB1117FE4F720289A8BFEE4E4B4E266119BAFBAEE684535`
