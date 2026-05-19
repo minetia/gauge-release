@@ -1,23 +1,21 @@
-# Gauge 0.1.18-test-public
+# Gauge 0.1.21-test-public
 
 Published: 2026-05-19
 
 ## Changes
 
-- Stabilized the live BTC price block width so `$76,xxx / USDT / change` no longer moves left and right.
-- Removed the visual flash animation from the live price number.
-- Stopped transient WebSocket errors from replacing the realtime status with `오류`.
-- Kept the realtime dot solid instead of blinking.
-- Kept the 0.1.17 AI reading embedded chart iframe fix.
+- Fixed AI reading timeframe loading for 15M through monthly views.
+- Added stale local DB detection and Binance refresh before chart data is returned.
+- Fixed disconnected realtime candle display caused by old desktop-local klines.
+- Updated the public test installer and desktop executables to 0.1.21.
 
 ## Verification
 
 - Built `GaugeSetup.exe` locally.
-- Installed the generated setup file.
-- Verified installed version: `0.1.18-test-public`.
-- Opened the installed desktop app and checked the AI reading chart screen.
-- Confirmed the installed runtime contains the fixed `last-upd` and WebSocket error handling code.
+- Verified local desktop DB 15M candles now run through `2026-05-19 17:15` with gap count 0.
+- Opened the rebuilt desktop app and confirmed the chart no longer shows disconnected candles after data refresh.
+- Verified `latest.json` hash matches the uploaded setup file.
 
 ## SHA256
 
-`BEAC606D93D347E3C37BC1CE8E2732726A44E6F9AF9A66DCAF91EA4A3A07C58D`
+`15D2FFA9B5198CCA03BB649225BBEF0B7C0948F5C9C52D1924E4B993838629C0`

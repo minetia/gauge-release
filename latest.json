@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.18-test-public",
+  "version": "0.1.21-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "BEAC606D93D347E3C37BC1CE8E2732726A44E6F9AF9A66DCAF91EA4A3A07C58D",
-  "size": 78737578,
+  "sha256": "15D2FFA9B5198CCA03BB649225BBEF0B7C0948F5C9C52D1924E4B993838629C0",
+  "size": 78947061,
   "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Stabilizes the live BTC price and realtime status area so transient websocket errors no longer flash as 오류 or move the layout. Keeps the AI reading chart iframe fix and fast embedded chart mode."
+  "notes": "Fixes AI reading timeframe loading and refreshes stale local chart data before rendering so desktop charts do not show disconnected realtime candles."
 }
