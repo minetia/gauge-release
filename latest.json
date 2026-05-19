@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.26-test-public",
+  "version": "0.1.27-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "A11C204901B1FC62DA16998EB4DC1200890A3F49C63A21E616C9DC1D2DEC4FD9",
-  "size": 78979895,
+  "sha256": "9F9A42E832E4EDE6D2E710B0B4EFFEE02B574B474EE4EB0C1ADD0C82F2634366",
+  "size": 78975891,
   "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Adds 2022 history prefetch for 15M, 30M, 1H, 4H, 1D, weekly, and monthly charts. Charts still open fast, then load older candles in 1,000-row pages from the local cache."
+  "notes": "Fixes indicator analysis to rank indicators by same-time candle alignment. LONG means the indicator showed LONG while the candle moved up; SHORT means the indicator showed SHORT while the candle moved down."
 }
