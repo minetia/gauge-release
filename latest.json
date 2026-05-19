@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.21-test-public",
+  "version": "0.1.22-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "15D2FFA9B5198CCA03BB649225BBEF0B7C0948F5C9C52D1924E4B993838629C0",
-  "size": 78947061,
+  "sha256": "19A926D94E2169CDEE8CE3D9E82A5EAB587114978839C9BDC490844F58E86D23",
+  "size": 72928500,
   "published_at": "2026-05-19",
   "mandatory": false,
-  "notes": "Fixes AI reading timeframe loading and refreshes stale local chart data before rendering so desktop charts do not show disconnected realtime candles."
+  "notes": "Adds the Gauge indicator analysis view, ranking SMC and GAUGE indicators by how accurately they matched actual LONG/SHORT chart direction on 1H and expandable timeframes."
 }

@@ -1,21 +1,24 @@
-# Gauge 0.1.21-test-public
+# Gauge 0.1.22-test-public
 
 Published: 2026-05-19
 
 ## Changes
 
-- Fixed AI reading timeframe loading for 15M through monthly views.
-- Added stale local DB detection and Binance refresh before chart data is returned.
-- Fixed disconnected realtime candle display caused by old desktop-local klines.
-- Updated the public test installer and desktop executables to 0.1.21.
+- Added the new `지표분석` top-menu screen.
+- Ranks GAUGE/SMC indicators by how accurately each LONG/SHORT signal matched the later real chart direction.
+- Default analysis is 1H with 15M, 30M, 4H, 1D, weekly, and monthly controls prepared for expansion.
+- Includes SMC/AI signal indicators plus chart indicators such as VWAP, Ichimoku, SAR, CCI, Williams %R, CMF, Aroon, Vortex, ROC, and Momentum.
+- Updated the public test installer and desktop executables to 0.1.22.
 
 ## Verification
 
 - Built `GaugeSetup.exe` locally.
-- Verified local desktop DB 15M candles now run through `2026-05-19 17:15` with gap count 0.
-- Opened the rebuilt desktop app and confirmed the chart no longer shows disconnected candles after data refresh.
-- Verified `latest.json` hash matches the uploaded setup file.
+- Verified `indicator_analysis.html` script compilation.
+- Verified `http://localhost:5012/indicator_analysis.html` returns 200.
+- Verified `http://localhost:5012/api/klines/1h?limit=160` returns 200.
+- Ran the indicator analysis logic against live 1H API data and confirmed ranked results render.
+- Verified `latest.json` hash matches the setup file.
 
 ## SHA256
 
-`15D2FFA9B5198CCA03BB649225BBEF0B7C0948F5C9C52D1924E4B993838629C0`
+`19A926D94E2169CDEE8CE3D9E82A5EAB587114978839C9BDC490844F58E86D23`
