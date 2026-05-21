@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.29-test-public",
+  "version": "0.1.30-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "3A60DD8838E42E45CDD800868A18FA68B61696A885A3B1E5B23F285C92446943",
-  "size": 72986086,
+  "sha256": "CE2DE86AB975DFFCB43E444CAEC60B7515DE8D155341BF50568AF632F05BEDD6",
+  "size": 72985161,
   "published_at": "2026-05-21",
   "mandatory": false,
-  "notes": "Reduces auto-follow lag by allowing the current accuracy-ranked first indicator to react to matching live price and metric reversals. Also prevents the background auto-follow engine from running inside AI Reading chart iframes."
+  "notes": "Adds an auto risk manager for profit protection and hard-loss exits. Entry and reversal direction still follows the accuracy-first indicator rule, while the risk manager can close only to protect gains or limit losses."
 }
