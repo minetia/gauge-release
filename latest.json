@@ -1,12 +1,8 @@
-{
-  "app": "Gauge",
-  "version": "0.1.32-test-public",
-  "channel": "test-public",
-  "file": "GaugeSetup.exe",
-  "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "1C5C81B3DC5D3E1B5138760FF7B0EA7BFCCE66168D734E446C67D3672AA36EA6",
-  "size": 72994028,
-  "published_at": "2026-05-21",
-  "mandatory": false,
-  "notes": "Adds Telegram notifications for Gauge trade and risk events. Entries, closes, reversals, risk exits, reentry locks, blocks, unlocks, failed entries, warnings, and errors are sent through the local Telegram configuration without storing the bot token in Git."
+﻿{
+    "version":  "0.1.33-test-public",
+    "url":  "https://raw.githubusercontent.com/minetia/gauge-release/main/GaugeSetup.exe",
+    "sha256":  "816C3361A133B9BBCB12FDFABE05F9DE3C81730E0D421608769F295BBB238AF8",
+    "size":  72986698,
+    "notes":  "선택 시간봉 캔들 단위 자동추종 적용: 15M은 15분 캔들, 1H는 1시간 캔들마다 1회만 판단합니다. 백그라운드 15초 주문 루프와 자동모드 리스크/SL/TP/트레일링 청산을 제거했습니다.",
+    "publishedAt":  "2026-05-21T15:14:15Z"
 }

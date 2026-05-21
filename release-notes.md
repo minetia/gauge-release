@@ -1,26 +1,12 @@
-# Gauge 0.1.32-test-public
+﻿# Gauge 0.1.33-test-public
 
-Published: 2026-05-21
+- 선택 시간봉 캔들 단위 자동추종 적용.
+- 15M 선택 시 15분 캔들마다 1회, 1H 선택 시 1시간 캔들마다 1회만 자동 판단.
+- 같은 캔들 안의 초/틱 가격 흔들림으로 반복 진입/청산하지 않도록 수정.
+- 백그라운드 gauge_auto_follow_engine.js 15초 주문 루프 제거.
+- 자동모드에서 리스크 관리자, SL, TP, 트레일링 자동청산 비활성화.
+- 자동매매 실행 상태 복원은 DB 	rade_engine_state 기준으로만 처리.
+- 설명 메뉴와 규칙 문서를 새 시간봉 캔들 추종 규칙으로 갱신.
 
-## Changes
-
-- Added Telegram notifications for important Gauge trading events.
-- Sends notifications for entries, closes, reversals, risk exits, reentry locks, reentry blocks, unlocks, failed entries, warnings, and errors.
-- Stores Telegram credentials only in local configuration or environment variables, not in Git.
-- Desktop internal API and local internal server both send notifications after DB save succeeds.
-- Default spam protection avoids sending repeated `rule_ok` hold events every 15 seconds.
-
-## Verification
-
-- Telegram local configuration was loaded successfully.
-- Test message was sent successfully.
-- Repository scan confirmed the bot token and chat id are not stored in committed files.
-- `python -m py_compile telegram_notify.py gauge_app.py gauge_installer.py gauge_updater.py btc_db\\internal_server.py`
-- `node E:\\tmp\\gauge_check\\check_html_batch.cjs ai_trading.html explanation.html`
-- `node --check gauge_auto_follow_engine.js`
-- Rebuilt unsigned installer with `-AllowUnsigned`.
-- Installed locally and verified `C:\\Users\\loves\\AppData\\Local\\Gauge\\VERSION.txt` is `0.1.32-test-public`.
-
-## SHA256
-
-`1C5C81B3DC5D3E1B5138760FF7B0EA7BFCCE66168D734E446C67D3672AA36EA6`
+SHA256: 816C3361A133B9BBCB12FDFABE05F9DE3C81730E0D421608769F295BBB238AF8
+SIZE: 72986698 bytes
