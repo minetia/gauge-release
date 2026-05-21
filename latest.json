@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.30-test-public",
+  "version": "0.1.31-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "CE2DE86AB975DFFCB43E444CAEC60B7515DE8D155341BF50568AF632F05BEDD6",
-  "size": 72985161,
+  "sha256": "517D497AFE640F230D4955EE17BF9011EEEFCF5D7B729D9ADC1965534259B243",
+  "size": 72989571,
   "published_at": "2026-05-21",
   "mandatory": false,
-  "notes": "Adds an auto risk manager for profit protection and hard-loss exits. Entry and reversal direction still follows the accuracy-first indicator rule, while the risk manager can close only to protect gains or limit losses."
+  "notes": "Fixes a critical risk-manager loop. After a risk exit, the same-side reentry is locked until the accuracy-first indicator flips direction, and hard-loss thresholds now include roundtrip fee plus a minimum movement buffer."
 }

@@ -1,16 +1,14 @@
-# Gauge 0.1.30-test-public
+# Gauge 0.1.31-test-public
 
 Published: 2026-05-21
 
 ## Changes
 
-- Added the Risk Manager Rule to AI Reading auto mode.
-- Entry, hold, and reversal direction still follow the Accuracy First Follow Rule.
-- The risk manager only closes positions; it never decides a new LONG/SHORT entry.
-- Profit protection arms after net profit reaches the configured threshold, then closes if gains are given back too far.
-- Hard-loss protection closes if net loss reaches the configured threshold.
-- Risk exits save `리스크청산` reasons and `risk_manager_*` monitor events.
-- Explanation menu now shows the risk manager rule from shared docs data.
+- Fixed a critical loop where risk-manager close was followed by immediate same-side reentry.
+- After `리스크청산`, the closed side is locked until the accuracy-first 1st indicator flips direction once.
+- Added DB monitor events: `risk_manager_reentry_lock`, `risk_manager_reentry_block`, `risk_manager_reentry_unlock`.
+- Hard-loss calculation now uses the larger value between the configured seed loss and roundtrip fee plus a minimum movement buffer.
+- Explanation menu and risk-manager rule document now describe the same-side reentry lock.
 
 ## Verification
 
@@ -18,10 +16,10 @@ Published: 2026-05-21
 - `node --check gauge_auto_follow_engine.js`
 - `python -m py_compile gauge_app.py gauge_installer.py gauge_updater.py`
 - Rebuilt unsigned installer with `-AllowUnsigned`.
-- Installed locally and verified `C:\\Users\\loves\\AppData\\Local\\Gauge\\VERSION.txt` is `0.1.30-test-public`.
-- Verified installed runtime files contain `RISK_MANAGER`, `리스크청산`, `risk-manager`, and `risk_manager_profit_protect`.
-- Verified `latest.json` hash and size match the setup file.
+- Installed locally and verified `C:\\Users\\loves\\AppData\\Local\\Gauge\\VERSION.txt` is `0.1.31-test-public`.
+- Verified installed runtime files contain `risk_manager_reentry_lock`, `risk_manager_reentry_block`, `risk_manager_reentry_unlock`, and the fee-buffered hard-loss logic.
+- Verified local DB recorded `risk_manager_reentry_block` after the risk exit, stopping same-side reentry.
 
 ## SHA256
 
-`CE2DE86AB975DFFCB43E444CAEC60B7515DE8D155341BF50568AF632F05BEDD6`
+`517D497AFE640F230D4955EE17BF9011EEEFCF5D7B729D9ADC1965534259B243`
