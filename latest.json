@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.31-test-public",
+  "version": "0.1.32-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "517D497AFE640F230D4955EE17BF9011EEEFCF5D7B729D9ADC1965534259B243",
-  "size": 72989571,
+  "sha256": "1C5C81B3DC5D3E1B5138760FF7B0EA7BFCCE66168D734E446C67D3672AA36EA6",
+  "size": 72994028,
   "published_at": "2026-05-21",
   "mandatory": false,
-  "notes": "Fixes a critical risk-manager loop. After a risk exit, the same-side reentry is locked until the accuracy-first indicator flips direction, and hard-loss thresholds now include roundtrip fee plus a minimum movement buffer."
+  "notes": "Adds Telegram notifications for Gauge trade and risk events. Entries, closes, reversals, risk exits, reentry locks, blocks, unlocks, failed entries, warnings, and errors are sent through the local Telegram configuration without storing the bot token in Git."
 }
