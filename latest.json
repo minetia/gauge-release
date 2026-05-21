@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.28-test-public",
+  "version": "0.1.29-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "CD802EF7C790081B51B6812AEDB03A34FF46A40A7C6B24D66BE53C55A3BC7053",
-  "size": 72986248,
+  "sha256": "3A60DD8838E42E45CDD800868A18FA68B61696A885A3B1E5B23F285C92446943",
+  "size": 72986086,
   "published_at": "2026-05-21",
   "mandatory": false,
-  "notes": "Applies the Accuracy First Follow Rule to AI Reading and the background auto-follow engine. The selected timeframe now recalculates the current accuracy-ranked first indicator every cycle, holds when direction matches, and closes/reverses when it changes direction. Rule details are also shown automatically in the Explanation menu."
+  "notes": "Reduces auto-follow lag by allowing the current accuracy-ranked first indicator to react to matching live price and metric reversals. Also prevents the background auto-follow engine from running inside AI Reading chart iframes."
 }
