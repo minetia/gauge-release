@@ -1,12 +1,12 @@
 {
   "app": "Gauge",
-  "version": "0.1.27-test-public",
+  "version": "0.1.28-test-public",
   "channel": "test-public",
   "file": "GaugeSetup.exe",
   "url": "https://github.com/minetia/gauge-release/raw/refs/heads/main/GaugeSetup.exe",
-  "sha256": "9F9A42E832E4EDE6D2E710B0B4EFFEE02B574B474EE4EB0C1ADD0C82F2634366",
-  "size": 78975891,
-  "published_at": "2026-05-19",
+  "sha256": "CD802EF7C790081B51B6812AEDB03A34FF46A40A7C6B24D66BE53C55A3BC7053",
+  "size": 72986248,
+  "published_at": "2026-05-21",
   "mandatory": false,
-  "notes": "Fixes indicator analysis to rank indicators by same-time candle alignment. LONG means the indicator showed LONG while the candle moved up; SHORT means the indicator showed SHORT while the candle moved down."
+  "notes": "Applies the Accuracy First Follow Rule to AI Reading and the background auto-follow engine. The selected timeframe now recalculates the current accuracy-ranked first indicator every cycle, holds when direction matches, and closes/reverses when it changes direction. Rule details are also shown automatically in the Explanation menu."
 }

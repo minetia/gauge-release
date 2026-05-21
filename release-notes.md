@@ -1,23 +1,28 @@
-# Gauge 0.1.27-test-public
+# Gauge 0.1.28-test-public
 
-Published: 2026-05-19
+Published: 2026-05-21
 
 ## Changes
 
-- Corrected indicator analysis from future-direction prediction accuracy to same-time candle alignment accuracy.
-- The top-ranked indicator is now the one whose LONG/SHORT direction most closely matches the candle's own up/down movement.
-- Clarified UI labels: `지표 LONG=캔들 LONG`, `지표 SHORT=캔들 SHORT`, and `같은 시점 캔들`.
-- Recent direction changes now explicitly show both `지표 LONG/SHORT` and the same-time `캔들 LONG/SHORT`.
-- Updated the public test installer and desktop executables to 0.1.27.
+- Applied the Accuracy First Follow Rule to AI Reading auto trading.
+- The selected timeframe recalculates the current accuracy-ranked first indicator on every cycle.
+- If the current first indicator direction matches the open position, Gauge records `rule_ok` and keeps the position.
+- If the current first indicator direction is opposite, Gauge records `rule_reverse_detected`, saves `규칙청산`, then opens the new direction with `규칙진입`.
+- Applied the same rule wording and DB event snapshots to the background auto-follow engine.
+- Added the current rule to the Explanation menu through shared `activeRule` documentation data.
+- Kept the build unsigned by using the existing `-AllowUnsigned` flow.
 
 ## Verification
 
-- Verified `indicator_analysis.html` inline scripts compile.
-- Verified `btc_chart.html` inline scripts still compile.
-- Verified version constants are 0.1.27.
-- Rebuilt `GaugeSetup.exe` locally.
+- `node --check gauge_auto_follow_engine.js`
+- `node E:\\tmp\\gauge_check\\check_html_batch.cjs ai_trading.html explanation.html indicator_analysis.html`
+- `python -m py_compile gauge_app.py gauge_installer.py gauge_updater.py btc_db\\collector.py btc_db\\internal_server.py`
+- `node tests\\gauge_indicator_follow.test.js`
+- Rebuilt `GaugeSetup.exe` locally with version `0.1.28-test-public`.
+- Installed the build locally and verified `C:\\Users\\loves\\AppData\\Local\\Gauge\\VERSION.txt` is `0.1.28-test-public`.
+- Verified installed runtime files contain `accuracy-first-follow`, `현재 정확도 1등 재계산`, and `정확도 1등 반복 추종`.
 - Verified `latest.json` hash and size match the setup file.
 
 ## SHA256
 
-`9F9A42E832E4EDE6D2E710B0B4EFFEE02B574B474EE4EB0C1ADD0C82F2634366`
+`CD802EF7C790081B51B6812AEDB03A34FF46A40A7C6B24D66BE53C55A3BC7053`
