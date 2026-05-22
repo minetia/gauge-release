@@ -1,8 +1,8 @@
 ﻿{
-    "version":  "0.1.35-test-public",
+    "version":  "0.1.36-test-public",
     "url":  "https://raw.githubusercontent.com/minetia/gauge-release/main/GaugeSetup.exe",
-    "sha256":  "435D9C62E971D1040D4078DB2560DCAE7E27F859E355C7ADD2CB4CC12029FE96",
-    "size":  72990824,
-    "notes":  "4H 3회 확인 추종 규칙 적용: 자동매매는 백테스트 최적 후보인 4H OBV 기준으로 3개 4H 캔들 연속 같은 방향일 때만 진입/반전합니다.",
-    "publishedAt":  "2026-05-22T05:13:00Z"
+    "sha256":  "EA89C51179630BDBF8361CD90E1ECB478D9A395DCB19129C77086380F7E3AF63",
+    "size":  72991873,
+    "notes":  "선택 시간봉 봉마감 1회 추종 규칙 복구: 4H 강제, OBV 고정, 3회 확인 대기를 제거하고 사용자가 선택한 시간봉 캔들마다 정확도 1등 지표 방향을 1회 판단합니다.",
+    "publishedAt":  "2026-05-22T07:25:13Z"
 }
