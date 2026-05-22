@@ -1,11 +1,11 @@
-﻿# Gauge 0.1.34-test-public
+﻿# Gauge 0.1.35-test-public
 
-- 자동모드 보호청산 리스크 관리자 복구.
-- SL, TP, 트레일링, 리스크 손실제한/수익보호 청산을 포지션 보호 전용으로 다시 활성화.
-- 보호청산 후 현재 선택 시간봉 캔들에 isk_closed를 저장해 같은 캔들 재진입을 금지.
-- DB에 포지션이 이미 없으면 화면 포지션을 비우고 반전 청산 경합을 중단.
-- uto_monitor_events에 uto_protection_reentry_block, ule_wait_after_protection_close 이벤트 저장.
-- 설명 메뉴와 규칙 문서를 보호청산 복구 기준으로 갱신.
+- 4H 3회 확인 추종 규칙 적용.
+- 자동매매 기본 시간봉을 4H로 변경.
+- 백테스트 최고 후보인 OBV 기준으로 주문 판단을 제한.
+- 정확도 1등 방향이 3개 4H 캔들 연속 같은 방향일 때만 신규 진입 또는 반전.
+- 3회 확인 전에는 ule_wait_confirm_streak 이벤트를 DB에 저장하고 대기.
+- 지표분석 화면은 전체 지표 표시를 유지하고, 실제 자동주문만 4H OBV 확인 규칙을 사용.
 
-SHA256: 8C4F33E551EC0CA3870A60B7E4D442D9F26D8365A2C304F8F384A7E57103D12F
-SIZE: 72987415 bytes
+SHA256: 435D9C62E971D1040D4078DB2560DCAE7E27F859E355C7ADD2CB4CC12029FE96
+SIZE: 72990824 bytes
