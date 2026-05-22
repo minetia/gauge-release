@@ -1,12 +1,11 @@
-﻿# Gauge 0.1.33-test-public
+﻿# Gauge 0.1.34-test-public
 
-- 선택 시간봉 캔들 단위 자동추종 적용.
-- 15M 선택 시 15분 캔들마다 1회, 1H 선택 시 1시간 캔들마다 1회만 자동 판단.
-- 같은 캔들 안의 초/틱 가격 흔들림으로 반복 진입/청산하지 않도록 수정.
-- 백그라운드 gauge_auto_follow_engine.js 15초 주문 루프 제거.
-- 자동모드에서 리스크 관리자, SL, TP, 트레일링 자동청산 비활성화.
-- 자동매매 실행 상태 복원은 DB 	rade_engine_state 기준으로만 처리.
-- 설명 메뉴와 규칙 문서를 새 시간봉 캔들 추종 규칙으로 갱신.
+- 자동모드 보호청산 리스크 관리자 복구.
+- SL, TP, 트레일링, 리스크 손실제한/수익보호 청산을 포지션 보호 전용으로 다시 활성화.
+- 보호청산 후 현재 선택 시간봉 캔들에 isk_closed를 저장해 같은 캔들 재진입을 금지.
+- DB에 포지션이 이미 없으면 화면 포지션을 비우고 반전 청산 경합을 중단.
+- uto_monitor_events에 uto_protection_reentry_block, ule_wait_after_protection_close 이벤트 저장.
+- 설명 메뉴와 규칙 문서를 보호청산 복구 기준으로 갱신.
 
-SHA256: 816C3361A133B9BBCB12FDFABE05F9DE3C81730E0D421608769F295BBB238AF8
-SIZE: 72986698 bytes
+SHA256: 8C4F33E551EC0CA3870A60B7E4D442D9F26D8365A2C304F8F384A7E57103D12F
+SIZE: 72987415 bytes
