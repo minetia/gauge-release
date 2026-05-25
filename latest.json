@@ -1,8 +1,8 @@
-﻿{
-    "version":  "0.1.36-test-public",
-    "url":  "https://raw.githubusercontent.com/minetia/gauge-release/main/GaugeSetup.exe",
-    "sha256":  "EA89C51179630BDBF8361CD90E1ECB478D9A395DCB19129C77086380F7E3AF63",
-    "size":  72991873,
-    "notes":  "선택 시간봉 봉마감 1회 추종 규칙 복구: 4H 강제, OBV 고정, 3회 확인 대기를 제거하고 사용자가 선택한 시간봉 캔들마다 정확도 1등 지표 방향을 1회 판단합니다.",
-    "publishedAt":  "2026-05-22T07:25:13Z"
+{
+  "version": "0.1.50-test-public",
+  "url": "https://raw.githubusercontent.com/minetia/gauge-release/main/GaugeSetup.exe",
+  "sha256": "44dd87d89c5b1809cf4aa503d8fa083ab49a195050fc74f5ed1fd61331216244",
+  "size": 73014138,
+  "notes": "지정가 주문 흐름 개선: 지정가 진입 체결 감시, 지정가 매도/청산 예약, 포트폴리오 진입사유 표시, 차트 지정가 청산 가격선 표시를 반영했습니다.",
+  "publishedAt": "2026-05-25T02:38:07Z"
 }
